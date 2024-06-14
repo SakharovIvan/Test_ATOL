@@ -5,7 +5,7 @@ import {
   deleteUserTable,
 } from "../__fixtures__/SQL.js";
 import pool from "../bin/bd.js";
-const fsp = require("file-system");
+import fsp from "file-system";
 
 const RE_EOL = /\r?\n/;
 const TAB = /\t/;
