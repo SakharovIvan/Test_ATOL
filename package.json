@@ -1,0 +1,16 @@
+{
+  "name": "test_atol",
+  "version": "1.0.0",
+  "description": "123",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "mysql": "^2.18.1",
+    "pg": "^8.12.0"
+  }
+}
