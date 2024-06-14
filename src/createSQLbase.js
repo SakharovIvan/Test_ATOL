@@ -52,7 +52,7 @@ const makeBase = async (datafilepath, userfilepath) => {
     }
     for (let userLine of masUser) {
       const userLineBroke = await userLine.split(TAB);
-      await pool.query(makeDataSQL(userLineBroke));
+      await pool.query(makeUserSQL(userLineBroke));
     }
   } catch (err) {
     console.log(err);

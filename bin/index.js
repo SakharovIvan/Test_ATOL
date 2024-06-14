@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import {Command} from "commander";
 import makeBase from '../src/createSQLbase.js'
 import findUser from '../src/finduser.js'
