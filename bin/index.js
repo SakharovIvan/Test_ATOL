@@ -2,7 +2,7 @@
 
 import { Command } from "commander";
 import makeBase from "../src/createSQLbase.js";
-import findUser from "../src/finduser.js";
+//import findUser from "../src/finduser.js";
 const program = new Command();
 
 program

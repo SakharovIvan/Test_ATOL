@@ -36,6 +36,7 @@ const makeBase = async (datafilepath, userfilepath) => {
     await pool.query(createDataTable);
     await pool.query(deleteUserTable);
     await pool.query(createUserTable);
+    console.log("Table created")
   } catch (err) {
     console.log(err);
   }
