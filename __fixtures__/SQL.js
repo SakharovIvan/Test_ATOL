@@ -1,11 +1,11 @@
 const createDataTable = `
 CREATE TABLE Data ( 
-    AccountingNumber bigint PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    AccountingNumber bigint,
     Surname TEXT,
     Name TEXT,
     SecondName TEXT,
     DateOfBirth DATE,
-    INN INT,
+    INN BIGINT,
     USERFIO TEXT,
     Status VARCHAR(50)
     );

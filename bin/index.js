@@ -1,24 +1,23 @@
 #!/usr/bin/env node
-
 import { Command } from "commander";
-import makeBase from "../src/createSQLbase.js";
-//import findUser from "../src/finduser.js";
+import findUser from "../src/finduser.js";
+
 const program = new Command();
 
 program
   .version("0.1.0")
-  .description("Create your SQL base and find users.")
-  //.argument("<login>")
-  //.argument("<password>")
-  //.option("-d, --data <datafilepath>")
-  //.option("-u, --user <userfilepath>")
-  //.option("-f, --format <type>", "output format")
+  .description("Find clients by login and password and change status.")
+  .argument("[login]")
+  .argument("[password]")
+  .argument("[AccountingNumber]", "AccountingNumber", 0)
+  .argument("[Status]", "Status", "")
   .helpOption("-h, --help", "output usage information")
-  //.action((datafilepath, userfilepath) => {
-  //  console.log(makeBase(datafilepath, userfilepath));
-  //})
-  //.action((login, password) => {
-  //  console.log(findUser(login, password));
-  //});
+  .action(async (login, password, AccountingNumber, Status) => {
+    try {
+      console.log(await findUser(login, password, AccountingNumber, Status));
+    } catch (err) {
+      console.log(err);
+    }
+  });
 
 program.parse();
